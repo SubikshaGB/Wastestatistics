@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+ 
+<head>
+    <style type="text/css">
+        .header{
+            text-align: center;
+            background-color: rgb(136, 185, 229);
+            height: 70px;
+            line-height: 70px;
+        }
+        .chart{
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+ 
+<body>
+
+ <form action=""method="post">
+    <div id="chart" class="chart">
+       <p>
+	   India is one of the mega under developed country of the world with respect to population status and dynamics.The growing rate of population is a direct factor responsible for enhancement of municipal solid waste (MSW) generation.The huge population of India is responsible for mammoth generation of MSW with daily rate of generation is <b>400g per capita</b>. The constituents of MSW mainly comprise of compostable items <b>(51-53%)</b>, followed by recyclable <b>(17-18%)</b> and having a moisture content of <b>46.76 %</b>. The MSW generated contains <strong>C/N ratio approximately 32 with calorific value of about 1700-1800 Kcal/Kg</strong>.Only fraction<b> (10-12%) </b>of the total compostable waste was found to be used for composting. There are plenty of technologies available for generating energy and other useful substances from the MSW ecofriendly, but <strong> 60%-90% of MSW </strong>generated in cities and towns are directly disposed off on or into land in an unsatisfactory manner. 
+	   </p>
+		<input type="text" name="yr" id="yr"/>
+		<button type="submit" name="submit" onclick="main_data()">Submit</button>
+    </div>
+ </form>
+</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+<script type="text/javascript">
+         
+        var graphs = {{graphJSON | safe}};
+        
+        Plotly.plot('chart',graphs,{});        
+ 
+    </script>
+ 
+</html>
